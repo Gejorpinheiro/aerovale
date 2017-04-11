@@ -86,6 +86,6 @@
 	</main>
 	<?php require_once('footer.php'); ?>
 </body>
-<script src="assets/js/script.min.js"></script>
+<script src="<?php echo base_url('assets/js/script.min.js');?>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 </html>

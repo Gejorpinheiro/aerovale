@@ -10,7 +10,19 @@
 		}
 
 		public function index(){
-			$this->load->view('login');
+			$this->form_validation->set_rules('user', '', 'trim|required|min_length[5]');
+			$this->form_validation->set_rules('pswd', '', 'trim|required|min_length[6]');
+
+			if ($this->form_validation->run() == FALSE) {
+				if(validation_errors()){
+					// set_msg(validation_errors());
+					echo "erro";
+				}
+			} else {
+				$dados_login = $this->input->post();
+				var_dump($dados_login);
+			}
+			$this->load->view('painel/login');
 		}
 	}
 ?>
