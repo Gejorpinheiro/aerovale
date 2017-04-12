@@ -7,8 +7,13 @@ class User_model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function get_info($info){
-		
+	public function get_info($user){
+		$this->db->where('usuario', $user);
+		$query= $this->db->get('user');
+		if($query->num_rows() == 1){
+			$row = $query->row();
+			return array('usuario' => $row->usuario, 'senha' => $row->senha);
+		}
 	}
 }
 ?>

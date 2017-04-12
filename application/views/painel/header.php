@@ -47,10 +47,10 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="javascript:void(0);"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="javascript:void(0);"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -63,7 +63,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="JavaScript:void(0);"><i class="fa fa-dashboard fa-fw"></i> Ver Site</a>
+                            <a href="<?php echo base_url();?>" target="_blank"><i class="fa fa-dashboard fa-fw"></i> Ver Site</a>
                         </li>
                         <li>
                             <a href="JavaScript:void(0);" class="active"><i class="fa fa-edit fa-fw"></i> Main</a>

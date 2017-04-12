@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Aerovale - Login</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -35,7 +35,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
+                        <h3 class="panel-title">Log In</h3>
                     </div>
                     <div class="panel-body">
                         <?php 
@@ -49,6 +49,13 @@
                             echo form_submit('loginBtn', 'Entrar', array('class' => 'btn btn-primary'));
                             echo form_close();
                         ?>
+                        <div>
+                            <?php  
+                                if($msg = get_msg()){
+                                    echo $msg;
+                                }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
