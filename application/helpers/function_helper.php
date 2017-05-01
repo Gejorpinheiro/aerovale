@@ -1,6 +1,6 @@
-<?php
+<?php  
 	defined('BASEPATH') OR exit('No direct script access allowed');
-		
+
 	if(!function_exists('set_msg')){
 		function set_msg($msg = NULL){
 			$ci =& get_instance();
@@ -26,6 +26,27 @@
 			}else{
 				return true;
 			}
+		}
+	}
+
+	if(!function_exists('config_upload')){
+		function config_upload($path = './uploads/', $types = 'jpg|png', $size = 800){
+			$config['upload_path'] = $path;
+			$config['allowed_types'] = $types;
+			$config['max_size']  = $size;
+			return $config;
+		}
+	}
+
+	if(!function_exists('toDb')){
+		function toDb($string = NULL){
+			return htmlentities($string);
+		}
+	}
+
+	if(!function_exists('toHtml')){
+		function toHtml($string = NULL){
+			return html_entity_decode($string);
 		}
 	}
 ?>
